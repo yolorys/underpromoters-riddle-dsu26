@@ -1,9 +1,9 @@
 # The Underpromoter's Riddle: A Computational Analysis of the Knight Promotion in Chess
 
-**Author:** Yelarys Seidin
-**Faculty Mentor:** Dr. Justin Schroeder
-**Technical Mentor:** Dr. Samuel Flint
-**Institution:** Dakota State University
+**Author:** Yelarys Seidin  
+**Faculty Mentor:** Dr. Justin Schroeder  
+**Technical Mentor:** Dr. Samuel Flint  
+**Institution:** Dakota State University  
 **Event:** DSU Annual Research Symposium (Spring 2026)
 
 ## Project Overview
