@@ -8,7 +8,6 @@
 
 *.pgn
 *.zip
-*.csv
 .DS_Store
 
 # Emacs Stuff
