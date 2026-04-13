@@ -1,8 +1,10 @@
 # The Underpromoter's Riddle: A Computational Analysis of the Knight Promotion in Chess
 
-**Author:** Yelarys Seidin  
-**Institution:** Dakota State University  
-**Event:** DSU Annual Research Symposium (Spring 2026)  
+**Author:** Yelarys Seidin
+**Faculty Mentor:** Dr. Justin Schroeder
+**Technical Mentor:** Dr. Samuel Flint
+**Institution:** Dakota State University
+**Event:** DSU Annual Research Symposium (Spring 2026)
 
 ## Project Overview
 In chess, when a pawn reaches the 8th rank, it must be promoted. Because the Queen is the most powerful piece, human players choose to promote to a Queen overwhelmingly (up to 97.3% of the time). However, in roughly 1.5% of games, a player will explicitly reject a Queen in favor of a mathematically weaker Knight—a move known as an "Underpromotion." 
@@ -12,7 +14,7 @@ This research utilizes high-performance computing to ask a fundamental question:
 By comparing the actual decisions of human players against the infallible mathematical "Ground Truth" of the Stockfish chess engine, this pipeline reveals the psychological "Queen Bias" that causes humans to blunder winning games, while also identifying brilliant tactical saves and unnecessary stylistic flexing.
 
 ## The Computational Pipeline
-This repository contains the Python scripts used to process over 310,000 elite games from the Lichess Database. The architecture is broken into four distinct stages:
+This repository contains the Python scripts used to process over 310,000 elite games from the Lichess Elite Database. The architecture is broken into four distinct stages:
 
 ### Stage 1: Extraction
 * `01a_find_knight_promotions.py`
@@ -23,7 +25,7 @@ This repository contains the Python scripts used to process over 310,000 elite g
 * `02a_analyze_behavioral.py`
 * `02b_analyze_objective.py`
 * `utils.py`
-**Function:** Deployed on DSU's Nestor High-Performance Computing (HPC) cluster, these scripts utilize the Stockfish engine to evaluate the board states. 
+**Function:** Deployed on a High-Performance Computing (HPC) cluster, these scripts utilize the Stockfish engine to evaluate the board states. 
 * *Behavioral Track:* Evaluates the specific move the human chose.
 * *Objective Track:* Evaluates all legal promotion paths to find the mathematical absolute best move.
 
