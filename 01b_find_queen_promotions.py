@@ -3,10 +3,12 @@ import csv
 import chess.pgn
 
 # --- Configuration ---
-# Set the name of your large PGN file here
-pgn_file_name = "lichess_elite_2025-05.pgn" 
+# Set the name of your large PGN file
+# For this specific version of my research, I used May 2025 PGN data from Lichess Elite Databse, which is
+# available at https://database.nikonoel.fr/. You can download it from there and set the name here.
+pgn_file_name = "ENTER_PGN_FILE_NAME_HERE.pgn"
 # Set the name of the file where you want to save the results
-output_file_name = "knight_promotions.csv"
+output_file_name = "queen_promotions.csv"
 
 # --- Main Script ---
 print(f"Starting to process {pgn_file_name}...")
@@ -44,10 +46,10 @@ while True:
             # This represents the position right BEFORE the promotion
             fen_before_move = board.fen()
             
-            # Check if the current move is a promotion to a knight
+            # Check if the current move is a promotion to a queen
             # The 'promotion' attribute of a move is not None if it's a promotion
-            # We then check if the promotion piece is a knight
-            if move.promotion is not None and move.promotion == chess.KNIGHT:
+            # We then check if the promotion piece is a queen
+            if move.promotion is not None and move.promotion == chess.QUEEN:
                 # We found one!
                 found_count += 1
                 # Write metadata to our output file
@@ -55,7 +57,7 @@ while True:
                     "FEN": fen_before_move,
                     "White": game.headers.get("White", "Unknown"),
                     "Black": game.headers.get("Black", "Unknown"),
-                    "Move": move.uci() # the actual move in UCI format (e.g., e7e8n for knight promotion)
+                    "Move": move.uci() # the actual move in UCI format (e.g., e7e8q for queen promotion)
                 })
             
             # Make the move on the board to advance to the next position
@@ -63,7 +65,7 @@ while True:
 
         # Print a progress update every 10,000 games
         if game_count % 10000 == 0:
-            print(f"Scanned {game_count} games, found {found_count} knight promotions...")
+            print(f"Scanned {game_count} games, found {found_count} queen promotions...")
 
     except Exception as e:
         # This helps to skip any games that might have errors in the PGN file
@@ -76,5 +78,5 @@ raw_output_file.close()
 
 print("\n--- Process Complete ---")
 print(f"Total games scanned: {game_count}")
-print(f"Total knight promotions found: {found_count}")
+print(f"Total queen promotions found: {found_count}")
 print(f"Results saved to: {output_file_name}")
