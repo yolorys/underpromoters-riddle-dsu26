@@ -4,7 +4,8 @@
 **Faculty Mentor:** Dr. Justin Schroeder  
 **Technical Mentor:** Dr. Samuel Flint  
 **Institution:** Dakota State University  
-**Event:** DSU Annual Research Symposium (Spring 2026)
+**Event:** DSU Annual Research Symposium (Spring 2026)  
+**Presentation/Slides**: https://1drv.ms/p/c/a0426b1c63e61c43/IQAV88jpXs6ESpS2pGhnofRLAXuJnglisrwZOXXAzrtAzUY
 
 ## Project Overview
 In chess, when a pawn reaches the 8th rank, it must be promoted. Because the Queen is the most powerful piece, human players choose to promote to a Queen overwhelmingly (up to 97.3% of the time). However, in roughly 1.5% of games, a player will explicitly reject a Queen in favor of a mathematically weaker Knight—a move known as an "Underpromotion." 
